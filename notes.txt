@@ -1,0 +1,564 @@
+
+
+
+objects in python
+------------------
+*** Everything in python is object ****
+*** Every object contains set of methods *****
+
+
+
+number : number can be integer or decimal or octal or hexa
+-----
+val = 10
+aval = 43.43
+
+
+string
+------
+string can be defined in single or double or triple quotes
+
+aname = 'python programming'
+bname  = "java language"
+cname = """scala programming"""
+
+
+list ( array in C )
+-------------------
+list contains set of elements
+Elements can be set of numbers or strings or any combination
+list elements are defined in []
+
+
+alist = [10,20,30]
+blist = ["unix","java","hadoop"]
+clist = [10,20,"scala","spark"50,63]
+
+
+tuple  ( READ ONLY )
+------
+tuple  contains set of elements
+Elements can be set of numbers or strings or any combination
+tuple  elements are defined in ()
+*****  Elements inside tuple cannot be modified ******
+
+alist = (10,20,30)
+blist = ("unix","java","hadoop")
+clist = (10,20,"scala","spark"50,63)
+
+
+
+
+dictionary
+------------
+dictionary contains elements in the form of keys and values.
+** dictionary values can be again list of tuple or dictionary
+   dictionary of lists (OR) dictionary of tuples  (or ) dictionary of dictionaries (or)
+                                                        dictionary of dictionary of dictionaries         
+** Indexing is not allowed in dictionary ****
+dictionary elements are defined in {}
+
+Syntax :     object = { key:value , key:value , key:value}
+example:       book = {"chap1":10 , "chap2":20 ,"chap3":30}
+               info = {"chap1":["mark","UK",100] , "chap2":["Ren",2000,"US"] ,"chap3":["Peter",300,"AUS"]}
+               print(book["chap1"])
+
+
+set
+----
+set of unordered collection of UNIQUE items.
+set elements are defined in {}.
+
+aset =  {10,10,10,20,20,30,30,30,30,30,30}
+print(aset)
+
+
+classification of objects
+
+
+mutable objects
+----------------
+list 
+dictionary
+set
+
+immutable objects ( unchangable)
+---------------------
+number
+string
+tuple
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+commenting in python
+--------------------
+
+single line comment (#)
+
+multiline comment
+
+'''
+all the lines defined in these quotes
+are ignored
+'''
+
+"""
+all the lines defined in these quotes
+are ignored
+
+"""
+
+
+
+ 
+
+builtin functions
+------------------
+
+In the console .. type the below
+
+dir(__builtins__)   ---------------------> will display all the list of builtin functions and exception names
+
+functions & methods
+--------------------
+
+method : method is object specific   & all the methods are accessed with . operator
+         string methods are different to list methods
+         dictionary methods are different to tuple methodss
+
+function: functions are common for all the objects
+          print(alist) 
+          print(name)
+          type(10)
+          type([10,320,430])
+
+
+frequenly used
+-----------------
+print()
+len()    : display the length of any object
+range()  : display set of values
+input()  : capture input from keyboard
+type()   : display the  type of object
+isinstance() : validate the type of objecct
+max()     : largest among the list
+min()     : smallest among the list
+sum()     : sum of the list
+zip()     : combining two lists)
+help()    : man in linux ( help of any function or method)
+dir()     : display all hte list of methods
+open()    : opening the file
+
+
+conversion functions
+--------------------
+int()     : converting the object to integer
+float()   : converting to decimal value
+str()     : converting the object ot
+list()    : converting to  list
+tuple()   : converting to tuple
+dict()
+set()
+
+
+String concatenation
+--------------------
+
+*** object should be of same type *****
+
+statements
+-----------
+
+conditional statements
+- if condition
+- if-else
+- if-elif-elif-elif-elif ...... else
+
+
+control statements
+-------------------
+for
+while
+
+
+jump statements
+--------------
+break
+continue
+
+
+level1
+level1
+if cond:
+     level2
+     level2
+     level2
+else:
+     level2
+     level2
+level1
+level1
+
+###############
+# example
+###############
+level1
+if cond:
+     level2
+     if cond:
+	level3
+	level3
+else:
+     level2
+     level2
+level1
+level1
+
+
+
+
+
+operators
+--------------
+arithmetic operators : + - * % /
+
+relational operators : <  <=      >        >=      ==      !=
+                        
+                       if a < 10 :
+                       if name == "python":
+
+logical operators   :  and      or    not
+
+                       if len(name) >  0  and name.isupper():                       
+                       if  a> 100 or a < 500 :
+
+assignemnt operator  ( ++ and -- are NOT allowed in python )
+--------------------
+val = 10
+val +=1  (or) val = val + 1
+val -=1  (or) val = val -1
+
+special operators :       as ( used in libraries and exception handling )
+                          in
+                          
+                          if 'python' in 'python programming'
+                          
+			  if 10 in [10,20,30,40,50]
+                          
+		          adict = {"chap1":10 ,"chap2":20 ,"chap3":30}
+                          if  "chap1" in adict
+
+                
+
+file handling
+-------------
+- working with flat files ( .txt  .csv  .log  .conf  .prop  ..... )
+------------------------------------------------------------------
+
+opening the file
+----------------
+
+syntax :      object = open(filename , mode)
+Example :     fobj = open("clients.txt","r")      # opening in read mode
+
+
+	      fobj = open("clients.txt","w")      # opening in write mode
+	      case1: If the file is not existing ..... file will be created first
+              case2: If the file is already existing ..it overwrites the data
+
+	      fobj = open("clients.txt","a")      # opening in append mode
+	      case1: If the file is not existing ..... file will be created first
+              case2: If the file is already existing ..it appends the data
+
+ 
+closing the file
+--------------
+fobj.close() 
+
+
+
+
+different ways of reading the file
+--------------------------------
+
+- read the file line by line
+- read the complete file at a time  in string format ( using  fobj.read())
+- using csv library
+- usinb pandas library
+
+
+
+- working with third party files  ( xls xlsx pdf pptx  mp4 ....... )
+
+
+
+
+
+Exception handling
+--------------------
+
+1.Syntax error
+2.runtime error
+
+Handling the exceptions in the runtime is known as exception handling
+
+
+try    : contains our actual code
+except : will be specifying here what has to done
+else   : If not exception found.. else will be executed
+finally: will be executed all the times
+
+else and finally are optional 
+
+
+
+
+library (or) package (or) module
+--------------------------------
+
+Every library contains set of methods defined by someone else.
+
+
+importing all the methods from the library
+------------------------------------------
+import math
+print(math.floor(23.9))
+print(math.log(2))
+
+
+import required methods ONLY   ( . operator is not required in this context )
+---------------------------
+from math import cos,log
+print(cos(2))
+print(log(3))
+
+
+import library with alias name    
+--------------------------------
+import math as m
+print(m.floor(234.3))
+print(m.tan(3))
+
+
+there are 2 types of libraries
+-------------------------------
+
+
+builtlin liraries
+-------------------
+builtin libraries are installed with the python which are generally used by everyone ( logging , os level operations ,  ftp operations , extract/reading the zipfiles , connecting to web , random , math , sys.. )
+
+
+third party libraries
+---------------------
+Based on the requirement( cloud , database , excel operations , remote infra ) , developer has to install the third party library from www.pypi.org
+
+installing third party library
+- installing with pip
+- installing manually
+
+
+
+database       - mysql
+python library -  pymysql
+
+
+frequently used builtin libraries
+-----------------------------------
+
+os            : os level operations
+sys           : system config information
+urllib.request: working with http
+math          : mathematical operations
+random        : random numbers
+calendar
+smtplib       : sending mails
+ftplib        : ftp'ng the file
+telnetlib     :
+logging       : logging all the events
+shutil        : copy,move,rmtree ....
+filecmp       : comparing directories
+zipfile       : create/extract the zip files
+rarfile       : create/extract the tar files
+tarfile       : create/extract the tarfiles
+getpass       : shadowing the password
+json          : reading/writing json files
+csv           : reading/writing csv files
+xml         
+sysconfig     : system configuration
+collections   : working with dictionaries
+argparse      : passing args from command line
+optparse      : passing args from command line
+time          : working with date and time
+datetime      : working with date and time
+cryptography  : encrypting and decrypting the passwords
+heapq         : performing array operations
+gzip          : reading gunzip files 
+re            : validating the strings
+ipadresss     : validting ip address
+platform      : display platform information
+pathlib       : creating temp files
+threading     : for performing multi threading
+multiprocessing: 
+subprocess    : invoking the system commands ( linux or dos commands)
+
+
+
+
+re    ( regex or regular expression )
+---
+
+- match   ( only at the beginning of the string)
+- search  ( anywhere in the string )
+- substitute ( replace the patterns )
+
+meta characters (or) wildcard characters
+---------------------------------------
+^    : at the beginning of the string
+       if re.search("^python", name)  
+
+$    : at the end of the string
+       if re.search("python$", line )
+*    : zero or more occurences of the preceding character
+       if re.search("pyt*hon", line)
+       python --------------> valid
+       pyhon  ---------------> valid
+       pytttttttttthon ------> valid
+
++    : one or more occurence of the preceding character
+       if re.search("pyt+hon", line)
+       python --------------> valid
+       pyhon  ---------------> Invalid
+       pytttttttttthon ------> valid
+
+?    : either zero or one occurence of the preceding character
+       if re.search("pyt?hon", line)
+       python --------------> valid
+       pyhon  ---------------> valid
+       pytttttttttthon ------> invalid
+
+
+.    : any single character or digit or symbol
+       if re.search(".ython",line)
+	mython  -------------> valid
+	jython  -------------> valid
+	
+(|)  :  (string1|string2)
+        if re.search("perl|python" , line)
+
+        if re.search("perl|^python|ruby$" , line)
+
+{}   :  { min,max}    min to max occurences of preceding character
+        if re.search("pyt{2,5}thon",line)
+         python ---------------> Invalid
+         pyhon   ---------------> Invalid
+         pytttthon -------------> valid
+
+[]   : any character or digit or symbol defined in []
+         if re.search("[abcd1ezy]ython", line )
+         aython   --------------> valid
+         bython   --------------> valid
+         dython   --------------> valid
+         mython   --------------> Invalid
+         1ython
+
+\d   : any digit
+\d{1}: one single digit
+\d{1,3}: 3-digited number
+
+\s   : any white space
+
+
+
+
+- functional programming (top- down programming )
+---------------------------------------------------
+
+- Object oriented programming
+-------------------------------
+- class
+- object
+
+
+
+class : Every class contains member functions( methods )and attributes
+
+object : Object is the instance of the class
+
+self  : self is the instance of the object
+
+
+**** self will be the first paramter in the class methods **
+
+
+
+
+remote connectivity
+---------------------
+
+telnet  : telnetlib
+ftp     : ftplib
+sftp    : pysftp
+ssh     : paramiko ( base library for all ssh connections)
+          netmiko  ( designed on the top of paramiko )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
