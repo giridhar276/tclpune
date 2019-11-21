@@ -536,13 +536,44 @@ ssh     : paramiko ( base library for all ssh connections)
 
 
 
+display all the existing databases
+-----------------------------------
+show databases ;
+
+create your database
+----------------------
+create database tcl;
+
+accesing your database
+---------------------
+use tcl;
+
+display all the tables 
+-----------------------
+show tables    ( will be empty)
+
+creating table
+----------------
+create table realestate( street varchar(100) , city varchar(100)) ;
+
+inserting the records
+-----------------------
+insert into realestate values('MG Road','Pune');
+insert into realestate values('University Road','Pune');
+
+displaying the records
+----------------------
+select * from realestate;
+
+display all the fields of table
+--------------------------------
+desc realestate ;
 
 
 
 
 
-
-
+create table realestateinfo ( street varchar(100) , city varchar(100) , zip varchar(100) , state varchar(100) , beds varchar(100) , baths varchar(100) , sq_ft varchar(100) , type varchar(100) , sale_date varchar(100) , price varchar(100) , latitude varchar(100) , longitude varchar(100) );
 
 
 
